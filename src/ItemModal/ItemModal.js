@@ -5,15 +5,17 @@ const ItemModal = ({ selectedCard, onClose }) => {
 
   return (
     <div className={`modal`}>
-      <div className="modal__content">
+      <div className="modal__content modal__content_type_image">
         <button type="button" className="modal__close-button" onClick={onClose}>
           {" "}
           {""} {""}{" "}
         </button>
 
-        <img src={selectedCard.link} />
-        <div>{selectedCard.name}</div>
-        <div>Weather Type: {selectedCard.weather} </div>
+        <img className="modal__image" src={selectedCard.link} />
+        <div className="modal__footer">
+          <h2 className="modal__caption">{selectedCard.name}</h2>
+          <p>Weather Type: {selectedCard.weather} </p>
+        </div>
       </div>
     </div>
   );

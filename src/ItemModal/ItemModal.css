@@ -1,9 +1,42 @@
+.modal__content {
+  width: 498px;
+  border-radius: 16px;
+  border: none;
+}
+
+.modal__content_type_image {
+  padding: 0;
+}
+
 .modal__close-button {
+  position: absolute;
   background: transparent url("../images/close-button.svg");
   border: none;
   width: 20px;
   height: 20px;
-  top: -20px;
-  position: relative;
-  left: 425px;
+  top: 20px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.modal__image {
+  width: 100%;
+  border-radius: 18px;
+}
+
+.modal__caption {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.modal__footer {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  margin-left: 32px;
+  margin-bottom: 32px;
+  margin-top: 20px;
 }
