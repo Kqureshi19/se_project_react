@@ -1,0 +1,9 @@
+.modal__close-button {
+  background: transparent url("../images/close-button.svg");
+  border: none;
+  width: 20px;
+  height: 20px;
+  top: -20px;
+  position: relative;
+  left: 425px;
+}

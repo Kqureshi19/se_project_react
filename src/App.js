@@ -1,23 +1,92 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import Header from "./Header/Header";
+import Main from "./Main/Main";
+import Footer from "./footer/Footer";
+import ModalWithForm from "./ModalWithForm/ModalWithForm";
+import { useState } from "react";
+import ItemModal from "./ItemModal/ItemModal";
+import { getForecastWeather, parseWeatherData } from "./util/weatherApi";
+import { useEffect } from "react";
 
 function App() {
+  const weatherTemp = 99;
+  const [activeModal, setActiveModal] = useState("");
+  const [selectedCard, setSelectedCard] = useState({});
+  const [temp, setTemp] = useState(0);
+
+  const handleCreateModal = () => {
+    setActiveModal("create");
+  };
+
+  const handleCloseModal = () => {
+    setActiveModal("");
+  };
+
+  const handleSelectedCard = (card) => {
+    setActiveModal("preview");
+    setSelectedCard(card);
+  };
+  //console.log(selectedCard);
+  useEffect(() => {
+    getForecastWeather().then((data) => {
+      //console.log(data);
+      const temperature = parseWeatherData(data);
+      console.log(temperature);
+      setTemp(temperature);
+    });
+  }, []);
+  console.log(temp);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header onCreateModal={handleCreateModal} temp={temp} />
+      <Main weatherTemp={temp} onSelectCard={handleSelectedCard} />
+      <Footer />
+      {activeModal === "create" && (
+        <ModalWithForm title="New Garmet" onclose={handleCloseModal}>
+          <label className="modal__label">
+            Name
+            <input
+              type="text"
+              name="name"
+              minLength="1"
+              maxLength={"30"}
+              className="modal__form-input"
+              placeholder="Name"
+            />
+          </label>
+          <label>
+            Image
+            <input
+              type="url"
+              name="link"
+              minLength="1"
+              maxLength={"30"}
+              className="modal__form-input"
+              placeholder="Image URL"
+            />
+          </label>
+          <p>Select the weather type</p>
+          <div>
+            <div className="modal_radio-buttons">
+              <input type="radio" id="hot" value="hot" />
+              <label>Hot</label>
+            </div>
+            <div className="modal_radio-buttons">
+              <input type="radio" id="warm" value="warm" />
+              <label>Warm</label>
+            </div>
+            <div className="modal_radio-buttons">
+              <input type="radio" id="cold" value="cold" />
+              <label>Cold</label>
+            </div>
+          </div>
+        </ModalWithForm>
+      )}
+      {activeModal === "preview" && (
+        <ItemModal selectedCard={selectedCard} onClose={handleCloseModal} />
+      )}
     </div>
   );
 }
