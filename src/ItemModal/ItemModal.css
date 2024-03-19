@@ -22,6 +22,8 @@
 }
 
 .modal__close-button_type_preview {
+  background: transparent url("../images/previewCloseButton.svg");
+
   right: 27px;
   left: unset;
 }
