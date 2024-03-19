@@ -21,6 +21,11 @@
   margin-left: 155px;
 }
 
+.modal__close-button_type_preview {
+  right: 27px;
+  left: unset;
+}
+
 .modal__image {
   width: 100%;
   border-radius: 18px;

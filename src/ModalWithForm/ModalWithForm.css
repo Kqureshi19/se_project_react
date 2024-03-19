@@ -90,10 +90,10 @@
 }
 .modal_radio-buttons {
   display: flex;
-  flex-direction: column;
+  padding-bottom: 8px;
   border: none;
-  padding: 0;
-  gap: 7px;
+
+  gap: 8px;
   margin-bottom: 3px;
   margin: 2px;
 }

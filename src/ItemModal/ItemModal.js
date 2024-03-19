@@ -6,7 +6,11 @@ const ItemModal = ({ selectedCard, onClose }) => {
   return (
     <div className={`modal`}>
       <div className="modal__content modal__content_type_image">
-        <button type="button" className="modal__close-button" onClick={onClose}>
+        <button
+          type="button"
+          className="modal__close-button modal__close-button_type_preview"
+          onClick={onClose}
+        >
           {" "}
           {""} {""}{" "}
         </button>
