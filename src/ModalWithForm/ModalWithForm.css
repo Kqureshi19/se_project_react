@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Cabinet Grotesk";
+  src: url("../images/CabinetGrotesk-Regular.otf");
+}
+
 .modal {
   position: fixed;
   top: 0;
@@ -11,6 +16,7 @@
 }
 
 .modal__content {
+  font-family: "Cabinet Grotesk";
   position: relative;
   background-color: white;
   max-width: 496px;
@@ -21,6 +27,7 @@
   box-sizing: border-box;
   line-height: 20px;
   font-weight: 700;
+  padding: 28px 28px 36px 28px;
 }
 
 .modal__form-title {
@@ -82,5 +89,15 @@
   cursor: pointer;
 }
 .modal_radio-buttons {
-  gap: 8px;
+  display: flex;
+  flex-direction: column;
+  border: none;
+  padding: 0;
+  gap: 7px;
+  margin-bottom: 3px;
+  margin: 2px;
+}
+
+.modal__legend {
+  margin-bottom: 18px;
 }

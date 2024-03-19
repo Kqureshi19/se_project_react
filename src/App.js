@@ -67,7 +67,7 @@ function App() {
               placeholder="Image URL"
             />
           </label>
-          <p>Select the weather type</p>
+          <legend className="modal__legend">Select the weather type</legend>
           <div>
             <div className="modal_radio-buttons">
               <input type="radio" id="hot" value="hot" />
