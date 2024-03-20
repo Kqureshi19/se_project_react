@@ -1,7 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import Header from "../Header/Header";
-import Main from "../Main/Main";
+import Main from "../Main/Main.js";
 import Footer from "../footer/Footer";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 import { useState } from "react";
