@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Cabinet Grotesk";
-  src: url("../images/CabinetGrotesk-Regular.otf");
+  src: url("../../images/CabinetGrotesk-Regular.otf");
 }
 
 .modal {
@@ -72,7 +72,7 @@
 }
 
 .modal__close-button {
-  background: transparent url("../images/close-button.svg");
+  background: transparent url("../../images/close-button.svg");
   background-size: cover;
   background-repeat: no-repeat;
   border: none;

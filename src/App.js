@@ -3,7 +3,7 @@ import "./App.css";
 import Header from "./Header/Header";
 import Main from "./Main/Main";
 import Footer from "./footer/Footer";
-import ModalWithForm from "./ModalWithForm/ModalWithForm";
+import ModalWithForm from "./components/ModalWithForm/ModalWithForm";
 import { useState } from "react";
 import ItemModal from "./ItemModal/ItemModal";
 import { getForecastWeather, parseWeatherData } from "./utils/weatherApi";
