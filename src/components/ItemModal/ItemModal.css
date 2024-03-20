@@ -10,7 +10,7 @@
 
 .modal__close-button {
   position: absolute;
-  background: transparent url("../images/close-button.svg");
+  background: transparent url("../../images/close-button.svg");
   border: none;
   width: 20px;
   height: 20px;
@@ -22,7 +22,7 @@
 }
 
 .modal__close-button_type_preview {
-  background: transparent url("../images/previewCloseButton.svg");
+  background: transparent url("../../images/previewCloseButton.svg");
 
   right: 27px;
   left: unset;
