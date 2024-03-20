@@ -1,18 +1,22 @@
 //this array will contain all the different types of weather
 const weatherOptions = [
-  { url: require("../images/day/sunny.svg").default, day: true, type: "sunny" },
   {
-    url: require("../images/day/cloudy.svg").default,
+    url: require("../../images/day/sunny.svg").default,
+    day: true,
+    type: "sunny",
+  },
+  {
+    url: require("../../images/day/cloudy.svg").default,
     day: true,
     type: "cloudy",
   },
   {
-    url: require("../images/night/ncloudy.svg").default,
+    url: require("../../images/night/ncloudy.svg").default,
     day: false,
     type: "cloudy",
   },
   {
-    url: require("../images/night/nsunny.svg").default,
+    url: require("../../images/night/nsunny.svg").default,
     day: false,
     type: "moon",
   },
