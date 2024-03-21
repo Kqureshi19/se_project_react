@@ -2,7 +2,7 @@ import logo from "../../logo.svg";
 import "./App.css";
 import Header from "../Header/Header";
 import Main from "../Main/Main.js";
-import Footer from "../footer/Footer";
+import Footer from "../Footer/Footer";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 import { useState } from "react";
 import ItemModal from "../ItemModal/ItemModal";
@@ -29,12 +29,14 @@ function App() {
   };
   //console.log(selectedCard);
   useEffect(() => {
-    getForecastWeather().then((data) => {
-      //console.log(data);
-      const temperature = parseWeatherData(data);
-      console.log(temperature);
-      setTemp(temperature);
-    });
+    getForecastWeather()
+      .then((data) => {
+        //console.log(data);
+        const temperature = parseWeatherData(data);
+        console.log(temperature);
+        setTemp(temperature);
+      })
+      .catch(console.error);
   }, []);
   console.log(temp);
 
@@ -71,15 +73,15 @@ function App() {
           <div>
             <div className="modal_radio-buttons">
               <input type="radio" id="hot" value="hot" name="static" />
-              <label>Hot</label>
+              <label input>Hot</label>
             </div>
             <div className="modal_radio-buttons">
               <input type="radio" id="warm" value="warm" name="static" />
-              <label>Warm</label>
+              <label input>Warm</label>
             </div>
             <div className="modal_radio-buttons">
               <input type="radio" id="cold" value="cold" name="static" />
-              <label>Cold</label>
+              <label input>Cold</label>
             </div>
           </div>
         </ModalWithForm>

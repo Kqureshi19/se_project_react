@@ -15,7 +15,11 @@ const ItemModal = ({ selectedCard, onClose }) => {
           {""} {""}{" "}
         </button>
 
-        <img className="modal__image" src={selectedCard.link} />
+        <img
+          className="modal__image"
+          src={selectedCard.link}
+          alt={selectedCard.name}
+        />
         <div className="modal__footer">
           <h2 className="modal__caption">{selectedCard.name}</h2>
           <p>Weather Type: {selectedCard.weather} </p>

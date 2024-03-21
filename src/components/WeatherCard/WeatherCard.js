@@ -1,26 +1,4 @@
-//this array will contain all the different types of weather
-const weatherOptions = [
-  {
-    url: require("../../images/day/sunny.svg").default,
-    day: true,
-    type: "sunny",
-  },
-  {
-    url: require("../../images/day/cloudy.svg").default,
-    day: true,
-    type: "cloudy",
-  },
-  {
-    url: require("../../images/night/ncloudy.svg").default,
-    day: false,
-    type: "cloudy",
-  },
-  {
-    url: require("../../images/night/nsunny.svg").default,
-    day: false,
-    type: "moon",
-  },
-];
+import { weatherOptions } from "../../utils/constants";
 
 //we are passing in props
 const WeatherCard = ({ day, type, weatherTemp = "" }) => {
