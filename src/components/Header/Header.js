@@ -1,9 +1,13 @@
 import "./Header.css";
 import Logo from "../../images/Logo.svg";
 import avatar from "../../images/avatar.svg";
+import { currentDate } from "../../utils/constants";
+import { WeatherCityData } from "../../utils/weatherApi";
 
-const Header = ({ onCreateModal }) => {
+const Header = ({ onCreateModal, city }) => {
   console.log("Header");
+
+  console.log(city);
 
   return (
     <header className="header">
@@ -11,7 +15,9 @@ const Header = ({ onCreateModal }) => {
         <div>
           <img src={Logo} alt="logo1" />
         </div>
-        <div>Date</div>
+        <div>
+          {currentDate}, {city}
+        </div>
       </div>
       <div className="header__avatar-logo">
         <div>

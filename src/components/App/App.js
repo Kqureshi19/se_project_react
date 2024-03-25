@@ -14,6 +14,7 @@ function App() {
   const [activeModal, setActiveModal] = useState("");
   const [selectedCard, setSelectedCard] = useState({});
   const [temp, setTemp] = useState(0);
+  const [city, setCity] = useState("");
 
   const handleCreateModal = () => {
     setActiveModal("create");
@@ -33,16 +34,20 @@ function App() {
       .then((data) => {
         //console.log(data);
         const temperature = parseWeatherData(data);
+
         console.log(temperature);
+
         setTemp(temperature);
+        setCity(data.name);
       })
       .catch(console.error);
   }, []);
   console.log(temp);
+  console.log(1);
 
   return (
     <div>
-      <Header onCreateModal={handleCreateModal} temp={temp} />
+      <Header onCreateModal={handleCreateModal} temp={temp} city={city} />
       <Main weatherTemp={temp} onSelectCard={handleSelectedCard} />
       <Footer />
       {activeModal === "create" && (
@@ -73,15 +78,15 @@ function App() {
           <div>
             <div className="modal_radio-buttons">
               <input type="radio" id="hot" value="hot" name="static" />
-              <label input>Hot</label>
+              <label>Hot</label>
             </div>
             <div className="modal_radio-buttons">
               <input type="radio" id="warm" value="warm" name="static" />
-              <label input>Warm</label>
+              <label>Warm</label>
             </div>
             <div className="modal_radio-buttons">
               <input type="radio" id="cold" value="cold" name="static" />
-              <label input>Cold</label>
+              <label>Cold</label>
             </div>
           </div>
         </ModalWithForm>

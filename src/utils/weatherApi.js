@@ -18,12 +18,32 @@ export const getForecastWeather = () => {
 };
 
 export const parseWeatherData = (data) => {
-  //console.log(data);
+  console.log(data);
   const main = data.main;
+  const cityName = data.name;
   console.log(main);
+  console.log(22222222222);
+  console.log(cityName);
   const temperature = main && main.temp;
   console.log(Math.ceil(temperature));
   return Math.ceil(temperature);
+};
+//use state variable
+//call functions in app.js
+//pass state as a prop
+export const WeatherCityData = (data) => {
+  console.log(4444444444444444);
+  console.log(data.name);
+  // const res = {};
+  // res.city = data.name;
+  return data.name;
+
+  // const main = data.main;
+  // console.log(main);
+  // console.log(22222222222);
+  // const temperature = main && main.temp;
+  // console.log(Math.ceil(temperature));
+  // return Math.ceil(temperature);
 };
 
 /*const response = {
