@@ -7,6 +7,7 @@ import { WeatherCityData } from "../../utils/weatherApi";
 const Header = ({ onCreateModal, city }) => {
   console.log("Header");
 
+  console.log(onCreateModal);
   console.log(city);
 
   return (

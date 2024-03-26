@@ -77,16 +77,17 @@ function App() {
           <legend className="modal__legend">Select the weather type:</legend>
           <div>
             <div className="modal_radio-buttons">
-              <input type="radio" id="hot" value="hot" name="static" />
-              <label>Hot</label>
+              <input type="radio" id="hot" name="weather" value="hot"></input>
+              <label for="hot">Hot</label>
             </div>
             <div className="modal_radio-buttons">
-              <input type="radio" id="warm" value="warm" name="static" />
-              <label>Warm</label>
+              <input type="radio" id="warm" name="weather" value="warm"></input>
+
+              <label for="warm">Warm</label>
             </div>
             <div className="modal_radio-buttons">
-              <input type="radio" id="cold" value="cold" name="static" />
-              <label>Cold</label>
+              <input type="radio" id="cold" name="weather" value="warm"></input>
+              <label for="cold">Cold</label>
             </div>
           </div>
         </ModalWithForm>
