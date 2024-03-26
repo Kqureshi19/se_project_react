@@ -78,16 +78,16 @@ function App() {
           <div>
             <div className="modal_radio-buttons">
               <input type="radio" id="hot" name="weather" value="hot"></input>
-              <label for="hot">Hot</label>
+              <label htmlFor="hot">Hot</label>
             </div>
             <div className="modal_radio-buttons">
               <input type="radio" id="warm" name="weather" value="warm"></input>
 
-              <label for="warm">Warm</label>
+              <label htmlFor="warm">Warm</label>
             </div>
             <div className="modal_radio-buttons">
               <input type="radio" id="cold" name="weather" value="warm"></input>
-              <label for="cold">Cold</label>
+              <label htmlFor="cold">Cold</label>
             </div>
           </div>
         </ModalWithForm>
